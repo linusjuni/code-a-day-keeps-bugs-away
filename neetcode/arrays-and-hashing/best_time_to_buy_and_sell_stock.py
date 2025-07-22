@@ -11,11 +11,18 @@ from typing import List
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
-        best_profit = 0
+        buy_time = 0
+        sell_time = 1
+        max_profit = 0
 
-        for buy_idx in range(len(prices)):
-            for sell_idx in range(buy_idx, len(prices)):
-                if prices[sell_idx] - prices[buy_idx] > best_profit:
-                    best_profit = prices[sell_idx] - prices[buy_idx]
-            
-        return best_profit
+        while sell_time < len(prices):
+            if prices[buy_time] < prices[sell_time]:
+                profit = prices[sell_time] - prices[buy_time]
+                max_profit = max(max_profit, profit)
+            else:
+                buy_time = sell_time
+            sell_time += 1
+        return max_profit
+
+sol = Solution()
+print(sol.maxProfit([7,1,5,3,6,4]))
