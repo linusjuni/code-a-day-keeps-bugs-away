@@ -4,6 +4,7 @@ Given an integer array nums, return true if any value appears more than once in 
 
 from typing import List
 
+
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         seen = set()

@@ -8,9 +8,10 @@ You may return the output in any order.
 
 from typing import List
 
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-    
+
         def _create_frequency_buckets(nums: List[int]):
             distinct = {}
             seen = set()
@@ -25,14 +26,14 @@ class Solution:
 
         frequency_buckets = _create_frequency_buckets(nums)
         result = []
-        
+
         sorted_frequencies = sorted(frequency_buckets.keys(), reverse=True)
-        
+
         for freq in sorted_frequencies:
             for num in frequency_buckets[freq]:
                 if len(result) < k:
                     result.append(num)
                 else:
                     return result
-        
+
         return result

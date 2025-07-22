@@ -8,6 +8,7 @@ Return the maximum profit you can achieve. You may choose to not make any transa
 
 from typing import List
 
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 

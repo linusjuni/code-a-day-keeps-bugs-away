@@ -6,6 +6,7 @@ Each product is guaranteed to fit in a 32-bit integer.
 
 from typing import List
 
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         output = []

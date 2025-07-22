@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# uv virtual environment
+.venv/
+
+# Tool caches
+.ruff_cache/
+
+# Environment files
+.env
+.python-version
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store

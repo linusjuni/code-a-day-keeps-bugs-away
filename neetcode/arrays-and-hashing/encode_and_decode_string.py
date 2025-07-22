@@ -6,42 +6,43 @@ Please implement encode and decode
 
 from typing import List
 
+
 class Solution:
 
     def encode(self, strs: List[str]) -> str:
 
         if len(strs) == 0:
-            return ''
+            return ""
 
-        all_strings = ''
+        all_strings = ""
         lengths = []
         for s in strs:
             lengths.append(len(s))
             all_strings += s
 
-        lengths_str = ''
+        lengths_str = ""
         for length in lengths:
-            lengths_str += str(length) + ','
+            lengths_str += str(length) + ","
 
-        return all_strings + ' | ' + lengths_str[:-1]
+        return all_strings + " | " + lengths_str[:-1]
 
     def decode(self, s: str) -> List[str]:
 
-        if s == '':
+        if s == "":
             return []
 
-        parts = s.split(' | ', 1)
+        parts = s.split(" | ", 1)
         all_strings = parts[0]
         lengths_string = parts[1]
 
-        lengths = lengths_string.split(',')
+        lengths = lengths_string.split(",")
 
         decoded = []
         i = 0
 
         for length in lengths:
-            
-            to_append = all_strings[i:int(length)+i]
+
+            to_append = all_strings[i : int(length) + i]
             i += int(length)
             decoded.append(to_append)
 
