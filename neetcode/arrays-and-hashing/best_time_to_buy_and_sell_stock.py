@@ -23,6 +23,3 @@ class Solution:
                 buy_time = sell_time
             sell_time += 1
         return max_profit
-
-sol = Solution()
-print(sol.maxProfit([7,1,5,3,6,4]))
