@@ -15,10 +15,39 @@ class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         left, right = 0, len(numbers) - 1
 
-        while True:
-            if numbers[left] + numbers[right] > target:
+        while left < right:
+            
+            two_sum = numbers[left] + numbers[right]
+
+            if two_sum > target:
                 right -= 1
-            elif numbers[left] + numbers[right] < target:
+
+            elif two_sum < target:
                 left += 1
+
             else:
                 return [left + 1, right + 1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
