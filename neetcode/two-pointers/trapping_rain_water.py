@@ -12,7 +12,6 @@ class Solution:
         total_water_amount = 0
 
         for i, h in enumerate(height):
-            
 
             if (i == 0) or (i == len(height) - 1):
                 continue
@@ -23,10 +22,10 @@ class Solution:
             water_at_i = max(0, min(height[left], height[right]) - h)
             print(i, water_at_i)
             total_water_amount += water_at_i
-            
+
         return total_water_amount
-    
-height=[0,2,0,3,1,0,1,3,2,1]
+
+
+height = [0, 2, 0, 3, 1, 0, 1, 3, 2, 1]
 sol = Solution()
 sol.trap(height)
-            
