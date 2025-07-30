@@ -11,7 +11,6 @@ from typing import List
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-
         def _create_frequency_buckets(nums: List[int]):
             distinct = {}
             seen = set()

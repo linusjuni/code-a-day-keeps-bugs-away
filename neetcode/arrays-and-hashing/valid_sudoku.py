@@ -14,7 +14,6 @@ from typing import List
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-
         valid_numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "."}
 
         def _check_rows(board):

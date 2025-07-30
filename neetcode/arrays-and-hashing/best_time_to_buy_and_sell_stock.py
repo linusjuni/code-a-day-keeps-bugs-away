@@ -11,7 +11,6 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-
         buy_time = 0
         sell_time = 1
         max_profit = 0

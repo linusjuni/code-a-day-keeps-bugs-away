@@ -9,7 +9,6 @@ from typing import List
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-
         length_groups = {}
         anagram_groups = {}
 

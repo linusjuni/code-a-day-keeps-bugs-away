@@ -8,9 +8,7 @@ from typing import List
 
 
 class Solution:
-
     def encode(self, strs: List[str]) -> str:
-
         if len(strs) == 0:
             return ""
 
@@ -27,7 +25,6 @@ class Solution:
         return all_strings + " | " + lengths_str[:-1]
 
     def decode(self, s: str) -> List[str]:
-
         if s == "":
             return []
 
@@ -41,7 +38,6 @@ class Solution:
         i = 0
 
         for length in lengths:
-
             to_append = all_strings[i : int(length) + i]
             i += int(length)
             decoded.append(to_append)

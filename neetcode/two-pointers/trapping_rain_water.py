@@ -12,7 +12,6 @@ class Solution:
         total_water_amount = 0
 
         for i, h in enumerate(height):
-
             if (i == 0) or (i == len(height) - 1):
                 continue
 
